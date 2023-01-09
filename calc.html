@@ -10,8 +10,12 @@
         
     };
 
-    function subtract(a, b) {
-        return a - b;
+    function subtract(a, ...nums) {
+        let subtraction = a;
+        for (let num of nums){
+            subtraction -= num;
+        }
+        return subtraction;
     };
 </script>
 
