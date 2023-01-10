@@ -5,16 +5,16 @@
 3. JavaScript
 
 ## Functionality
-- This calculator performs basic arithmetic operations such as 
+- **This calculator performs basic arithmetic operations such as**
 1. add
 2. subtract
 3. multiply
 4. divide
 
-- UI elements it has include 
+- **UI elements it has include** 
 1. a displaay
 2. buttons for the operations
 
 *Hope you enjoy testing it out...*
 
-T
+###ChiDobe´
