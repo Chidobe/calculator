@@ -16,3 +16,7 @@ function subtract(a, ...nums) {
     }
     return subtraction;
 };
+
+function multiply(...nums){
+    
+}

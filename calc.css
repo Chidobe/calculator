@@ -1,15 +1,9 @@
 * {
-    font-family: ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
-    background-color: ;
+    background-color: rgb(233, 228, 228);
+    color: rgb(15, 14, 14);
 }
 
-.result {
-
-}
-
-.operation {
-    
-}
