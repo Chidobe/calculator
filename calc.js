@@ -18,5 +18,9 @@ function subtract(a, ...nums) {
 };
 
 function multiply(...nums){
-    
+    let multiple = 1;
+    for (let num of nums){
+        multiple *= num;
+    }
+    return multiple;
 }
