@@ -25,6 +25,10 @@ function multiply(...nums){
     return multiple;
 };
 
-function divide(){
-
+function divide(a, ...nums){
+    let dividend = a;
+    for (let num of nums){
+        dividend /= num
+    }
+    return dividend;
 };

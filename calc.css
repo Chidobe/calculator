@@ -14,11 +14,12 @@ body {
 }
 
 .app-body {
+    background-color: rgb(255, 255, 255);
     width: 300px;
     height: 600px;
     /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -34,7 +35,7 @@ header {
     width: 70px;
     height: 40px;
     
-    background-color: rgb(255, 255, 255);
+    background-color: hsl(120, 75%, 78%);
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     border-radius: 50px;
 }
@@ -46,7 +47,6 @@ header {
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    border: 5px solid red;
     align-self: flex-end;
     
     
@@ -76,4 +76,8 @@ button {
     height: 70px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 
+}
+
+.equals {
+    background-color: hsl(120, 75%, 78%);
 }
