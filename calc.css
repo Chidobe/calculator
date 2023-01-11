@@ -1,5 +1,6 @@
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1rem;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 }
 
 .app-body {
-    width: 400px;
+    width: 300px;
     height: 600px;
     /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
@@ -38,16 +39,41 @@ header {
     border-radius: 50px;
 }
 
+.display {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    border: 5px solid red;
+    align-self: flex-end;
+    
+    
+}
+
+.result-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .btn-container {
-    background-color:rgb(245, 255, 255);
+    
     display: grid;
-    grid-template-columns: repeat(4, 45px);
+    grid-template-columns: repeat(4, 75px);
     justify-content: stretch;
     gap: 4px;
+    
+    
+    
 
 }
 
 button {
-    width: 45px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    height: 70px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 
 }
