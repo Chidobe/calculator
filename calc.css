@@ -26,10 +26,28 @@ body {
 }
 
 header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     width: 70px;
+    height: 40px;
     
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-    border-radius: 50%;
+    border-radius: 50px;
+}
+
+.btn-container {
+    background-color:rgb(245, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(4, 45px);
+    justify-content: stretch;
+    gap: 4px;
+
+}
+
+button {
+    width: 45px;
+
 }
