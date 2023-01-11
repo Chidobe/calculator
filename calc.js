@@ -23,4 +23,8 @@ function multiply(...nums){
         multiple *= num;
     }
     return multiple;
-}
+};
+
+function divide(){
+
+};
