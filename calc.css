@@ -13,8 +13,19 @@ body {
     height: 100vh;
 }
 
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: #121212;
+        color: rgb(255, 255, 255);
+    }
+    button{
+        background-color: #121212;
+        color: rgb(255, 255, 255);
+    }
+}
+
 .app-body {
-    background-color: rgb(255, 255, 255);
+   
     width: 300px;
     height: 600px;
     /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
@@ -27,7 +38,7 @@ body {
     padding: 20px;
 }
 
-header {
+.light-dark-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +46,7 @@ header {
     width: 70px;
     height: 40px;
     
-    background-color: hsl(120, 75%, 78%);
+    background-color: rgb(161, 96, 251);
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     border-radius: 50px;
 }
@@ -70,7 +81,7 @@ header {
 }
 
 button {
-    background-color: rgb(255, 255, 255);
+    
     border: none;
     border-radius: 10px;
     height: 70px;
@@ -79,5 +90,5 @@ button {
 }
 
 .equals {
-    background-color: hsl(120, 75%, 78%);
+    background-color: rgb(161, 96, 251);
 }
