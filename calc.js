@@ -1,5 +1,16 @@
 
 
+const addBtn = document.querySelector('.add')
+addBtn.addEventListener('click', () => {
+    add();
+})
+
+
+
+
+
+
+
 function add(...nums) {
     let addition = 0;
     for (let num of nums){

@@ -45,7 +45,6 @@ body {
     text-align: center;
     width: 70px;
     height: 40px;
-    
     background-color: rgb(161, 96, 251);
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     border-radius: 50px;
@@ -58,9 +57,7 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    align-self: flex-end;
-    
-    
+    align-self: flex-end;   
 }
 
 .result-text {
@@ -68,25 +65,18 @@ body {
     font-weight: bold;
 }
 
-.btn-container {
-    
+.btn-container { 
     display: grid;
     grid-template-columns: repeat(4, 75px);
     justify-content: stretch;
     gap: 4px;
-    
-    
-    
-
 }
 
 button {
-    
     border: none;
     border-radius: 10px;
     height: 70px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-
 }
 
 .equals {
