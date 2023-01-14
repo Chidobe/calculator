@@ -1,25 +1,29 @@
-const operation = document.querySelector('.operation-text');
-const results = document.querySelector('.result-text');
-const allNumbers = document.querySelectorAll('.number');
+// CALCULATOR APP
+
+const operation = document.querySelector('.oprtn-disp');
+const results = document.querySelector('.rslt-disp');
+const clearBtn = document.querySelector('.clrBtn')
 const addBtn = document.querySelector('.add');
 
 
-addBtn.addEventListener('click', () => {
-    results.textContent = add(Number(operation.textContent));
-})
 
 
 
 
 
-// function add(...nums) {
-//     let addition = 1;
-//     for (let num of nums){
-//         addition += num;
-//     }
-//     return addition;
+
+
+
+
+
+function add(...nums) {
+    let addition = 1;
+    for (let num of nums){
+        addition += num;
+    }
+    return addition;
     
-// };
+};
 
 function subtract(a, ...nums) {
     let subtraction = a;

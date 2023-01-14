@@ -1,11 +1,12 @@
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.1rem;
+    background-color: rgb(255, 255, 255);
 }
 
 body {
     background-color: rgb(255, 255, 255);
-    color: rgb(15, 14, 14);
+    color: rgb(18, 18, 18);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,22 +14,23 @@ body {
     height: 100vh;
 }
 
+
+
 @media (prefers-color-scheme: dark){
+    *{
+        background-color: rgb(18, 18, 18);
+        color: rgb(255, 255, 255);
+    }
     body{
         background-color: #121212;
         color: rgb(255, 255, 255);
     }
-    button{
-        background-color: #121212;
-        color: rgb(255, 255, 255);
-    }
-}
+} 
 
 .app-body {
-   
     width: 300px;
     height: 600px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 8px;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -42,10 +44,9 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 70px;
-    height: 40px;
+    width: 60px;
+    height: 30px;
     background-color: rgb(161, 96, 251);
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     border-radius: 50px;
 }
 
@@ -59,7 +60,7 @@ body {
     align-self: flex-end;   
 }
 
-.result-text {
+.rslt-disp {
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -67,8 +68,7 @@ body {
 .btn-container { 
     display: grid;
     grid-template-columns: repeat(4, 75px);
-    justify-content: stretch;
-    gap: 4px;
+    gap: 5px;
 }
 
 button {
