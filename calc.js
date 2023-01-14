@@ -7,8 +7,17 @@ const addBtn = document.querySelector('.add');
 
 
 
+// EVENT LISTENERS
+clearBtn.addEventListener('click', () => clear())
 
 
+
+//FUNCTIONS
+//clear button
+function clear(){
+    operation.textContent = '';
+    results.textContent = '';
+}
 
 
 

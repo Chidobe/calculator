@@ -4,6 +4,7 @@
     background-color: rgb(255, 255, 255);
 }
 
+
 body {
     background-color: rgb(255, 255, 255);
     color: rgb(18, 18, 18);
@@ -13,7 +14,6 @@ body {
     box-sizing: border-box;
     height: 100vh;
 }
-
 
 
 @media (prefers-color-scheme: dark){
@@ -27,6 +27,7 @@ body {
     }
 } 
 
+
 .app-body {
     width: 300px;
     height: 600px;
@@ -39,6 +40,7 @@ body {
     padding: 20px;
 }
 
+
 .light-dark-toggle {
     display: flex;
     align-items: center;
@@ -50,6 +52,7 @@ body {
     border-radius: 50px;
 }
 
+
 .display {
     height: 200px;
     width: 300px;
@@ -60,10 +63,12 @@ body {
     align-self: flex-end;   
 }
 
+
 .rslt-disp {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
 
 .btn-container { 
     display: grid;
@@ -71,13 +76,27 @@ body {
     gap: 5px;
 }
 
+
 button {
     border: none;
     border-radius: 10px;
     height: 70px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
+button:hover{
+    background-color:rgb(230, 230, 230)
+}
+button:active{
+    background-color: rgb(161, 96, 251)
+}
+
 
 .equals {
     background-color: rgb(161, 96, 251);
+}
+.equals:hover{
+    background-color:rgb(150, 80, 247)
+}
+.equals:active{
+    background-color: rgb(116, 50, 209)
 }
