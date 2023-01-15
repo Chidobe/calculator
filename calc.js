@@ -3,6 +3,7 @@
 const operation = document.querySelector('.oprtn-disp');
 const results = document.querySelector('.rslt-disp');
 const clearBtn = document.querySelector('.clrBtn')
+const deleteBtn = document.querySelector('.backspace')
 const addBtn = document.querySelector('.add');
 const numsBtn = document.querySelectorAll('.numbr');
 const sevenBtn = document.querySelector('.seven');
@@ -15,6 +16,8 @@ let values = [];
 // 1. EVENT LISTENERS
 
 clearBtn.addEventListener('pointerdown', () => clear());
+
+deleteBtn.addEventListener('pointerdown', () => backspace());
 
 addBtn.addEventListener('pointerdown', () => add());
 
@@ -42,6 +45,7 @@ eightBtn.addEventListener('pointerdown', () => {
 function clear(){
     operation.textContent = '';
     results.textContent = '';
+    values = [];
 }
 
 
@@ -50,11 +54,18 @@ function dispNums(val){
 }
 
 
+function backspace(){
+    results.textContent = '';
+    let str = operation.textContent
+     return operation.textContent = str.slice(0,str.length - 1);
+}
+
 
 function add() {
     if (operation.textContent == '') return alert('Input a number first!');
     dispNums(addBtn.value)
     if (values[0] == null ) return;
+
     let addition = values.reduce((acc, curr) => acc + curr);
     
     return results.textContent = addition;
