@@ -12,8 +12,9 @@
 4. divide
 
 - **UI elements it has include** 
-1. a displaay
-2. buttons for the operations
+1. a display
+2. buttons for the operations (+, -, /,(), *, del, clear)
+3. number 0-9 buttons
 
 *Hope you enjoy testing it out...*
 

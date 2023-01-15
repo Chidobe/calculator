@@ -4,34 +4,60 @@ const operation = document.querySelector('.oprtn-disp');
 const results = document.querySelector('.rslt-disp');
 const clearBtn = document.querySelector('.clrBtn')
 const addBtn = document.querySelector('.add');
+const numsBtn = document.querySelectorAll('.numbr');
+const sevenBtn = document.querySelector('.seven');
+const eightBtn = document.querySelector('.eight');
 
 
-
-// EVENT LISTENERS
-clearBtn.addEventListener('click', () => clear())
+let values = [];
 
 
+// 1. EVENT LISTENERS
 
-//FUNCTIONS
-//clear button
+clearBtn.addEventListener('pointerdown', () => clear());
+
+addBtn.addEventListener('pointerdown', () => add());
+
+// numsBtn.forEach((btn) => {
+//     addEventListener('click', (event) => {
+//         let btnValue = event.target.value;
+//         dispNums(btnValue);
+//         console.log(btnValue)
+//     })
+// });
+
+sevenBtn.addEventListener('pointerdown', () => {
+    dispNums(sevenBtn.value); 
+    values.push(parseInt(sevenBtn.value, 10));
+});
+
+eightBtn.addEventListener('pointerdown', () => {
+    dispNums(eightBtn.value); 
+    values.push(parseInt(eightBtn.value, 10));
+});
+
+
+// 2. FUNCTIONS
+
 function clear(){
     operation.textContent = '';
     results.textContent = '';
 }
 
 
+function dispNums(val){
+    operation.append(val);
+}
 
 
 
-
-
-function add(...nums) {
-    let addition = 1;
-    for (let num of nums){
-        addition += num;
-    }
-    return addition;
+function add() {
+    if (operation.textContent == '') return alert('Input a number first!');
+    dispNums(addBtn.value)
+    if (values[0] == null ) return;
+    let addition = values.reduce((acc, curr) => acc + curr);
     
+    return results.textContent = addition;
 };
 
 function subtract(a, ...nums) {

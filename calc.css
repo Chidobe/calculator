@@ -84,10 +84,13 @@ button {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 button:hover{
-    background-color:rgb(230, 230, 230)
+    background-color:rgb(230, 230, 230);
+    color: rgba(0, 0, 0)
 }
 button:active{
-    background-color: rgb(161, 96, 251)
+    background-color: rgb(160, 160, 160);
+    font-size: 1rem;
+    color: rgba(0, 0, 0)
 }
 
 
@@ -95,8 +98,8 @@ button:active{
     background-color: rgb(161, 96, 251);
 }
 .equals:hover{
-    background-color:rgb(150, 80, 247)
+    background-color:rgb(150, 80, 247);
 }
 .equals:active{
-    background-color: rgb(116, 50, 209)
+    background-color: rgb(116, 50, 209);
 }
