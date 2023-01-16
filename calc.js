@@ -6,10 +6,6 @@ const clearBtn = document.querySelector('.clrBtn')
 const deleteBtn = document.querySelector('.backspace')
 const addBtn = document.querySelector('.add');
 const numsBtn = document.querySelectorAll('.numbr');
-const sevenBtn = document.querySelector('.seven');
-const eightBtn = document.querySelector('.eight');
-
-
 let values = [];
 
 
@@ -21,22 +17,11 @@ deleteBtn.addEventListener('pointerdown', () => backspace());
 
 addBtn.addEventListener('pointerdown', () => add());
 
-// numsBtn.forEach((btn) => {
-//     addEventListener('click', (event) => {
-//         let btnValue = event.target.value;
-//         dispNums(btnValue);
-//         console.log(btnValue)
-//     })
-// });
-
-sevenBtn.addEventListener('pointerdown', () => {
-    dispNums(sevenBtn.value); 
-    values.push(parseInt(sevenBtn.value, 10));
-});
-
-eightBtn.addEventListener('pointerdown', () => {
-    dispNums(eightBtn.value); 
-    values.push(parseInt(eightBtn.value, 10));
+numsBtn.forEach(btn => {
+    btn.addEventListener('pointerdown', () => {
+        dispNums(btn.value); 
+        values.push(parseInt(btn.value, 10));
+    });
 });
 
 
