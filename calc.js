@@ -57,19 +57,19 @@ function dispNums(val){
 function backspace(){
     results.textContent = '';
     let str = operation.textContent
-     return operation.textContent = str.slice(0,str.length - 1);
+     return operation.textContent = str.slice(0, str.length - 1);
 }
 
 
 function add() {
+    if (operation.textContent.slice(-1) == '+') return alert('+ is already present');
     if (operation.textContent == '') return alert('Input a number first!');
-    dispNums(addBtn.value)
-    if (values[0] == null ) return;
-
+    dispNums(addBtn.value);
     let addition = values.reduce((acc, curr) => acc + curr);
-    
     return results.textContent = addition;
 };
+
+
 
 function subtract(a, ...nums) {
     let subtraction = a;
@@ -79,6 +79,8 @@ function subtract(a, ...nums) {
     return subtraction;
 };
 
+
+
 function multiply(...nums){
     let multiple = 1;
     for (let num of nums){
@@ -86,6 +88,8 @@ function multiply(...nums){
     }
     return multiple;
 };
+
+
 
 function divide(a, ...nums){
     let dividend = a;
