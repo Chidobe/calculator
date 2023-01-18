@@ -20,31 +20,12 @@ addBtn.addEventListener('pointerdown', () => add());
 numsBtn.forEach(btn => {
     btn.addEventListener('pointerdown', () => {
         dispNums(btn.value); 
-        values.push(parseInt(btn.value, 10));
+        values.push(parseInt(operation.textContent, 10));
     });
 });
 
 
 // 2. FUNCTIONS
-
-function clear(){
-    operation.textContent = '';
-    results.textContent = '';
-    values = [];
-}
-
-
-function dispNums(val){
-    operation.append(val);
-}
-
-
-function backspace(){
-    results.textContent = '';
-    let str = operation.textContent
-     return operation.textContent = str.slice(0, str.length - 1);
-}
-
 
 function add() {
     if (operation.textContent.slice(-1) == '+') return alert('+ is already present');
@@ -82,4 +63,26 @@ function divide(a, ...nums){
         dividend /= num
     }
     return dividend;
+};
+
+
+
+
+
+function clear(){
+    operation.textContent = '';
+    results.textContent = '';
+    values = [];
+};
+
+
+function dispNums(val){
+    operation.append(val);
+};
+
+
+function backspace(){
+    results.textContent = '';
+    let str = operation.textContent
+     return operation.textContent = str.slice(0, str.length - 1);
 };

@@ -35,7 +35,7 @@ body {
     border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
     flex-direction: column;
     padding: 20px;
 }
@@ -54,19 +54,23 @@ body {
 
 
 .display {
-    height: 200px;
-    width: 300px;
+    padding: 0px;
+    margin: 0px;
+    height: 250px;
+    width: 280px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    align-self: flex-end;   
+    word-wrap: break-word;
+    word-break: break-all; 
 }
 
 
 .rslt-disp {
     font-size: 1.5rem;
     font-weight: bold;
+    
 }
 
 
