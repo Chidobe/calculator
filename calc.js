@@ -1,7 +1,21 @@
 // // CALCULATOR APP
 
+const numberBtns = document.querySelectorAll('.numbr');
+const operatorBtns = document.querySelectorAll('.operator');
+let firstNumberClicked = '';
+let secondNumberClicked = '';
 
 
+
+
+numberBtns.forEach(btn => {
+    btn.addEventListener('pointerdown', //wht happens when clicked)
+})
+
+
+operatorBtns.forEach(btn => {
+    btn.addEventListener('pointerdown', //wht happens when clicked)
+})
 
 
 
