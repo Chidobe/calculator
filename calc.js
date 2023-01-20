@@ -2,6 +2,8 @@
 
 const numberBtns = document.querySelectorAll('.numbr');
 const operatorBtns = document.querySelectorAll('.operator');
+const backspaceBtn = document.querySelector('.backspace');
+const allClearBtn = document.querySelector('.clear');
 let firstNumberClicked = '';
 let secondNumberClicked = '';
 
@@ -9,18 +11,21 @@ let secondNumberClicked = '';
 
 
 numberBtns.forEach(btn => {
-    btn.addEventListener('pointerdown', //wht happens when clicked)
+    btn.addEventListener('pointerdown',)
 })
 
 
 operatorBtns.forEach(btn => {
-    btn.addEventListener('pointerdown', //wht happens when clicked)
+    btn.addEventListener('pointerdown', () => {
+
+    })
 })
 
 
+backspaceBtn.addEventListener('pointerdown',)
 
 
-
+allClearBtn.addEventListener('pointerdown',)
 
 
 
