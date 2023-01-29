@@ -8,6 +8,7 @@ const backspaceBtn = document.querySelector('.backspace');
 const allClearBtn = document.querySelector('.clear');
 const operationDisplay = document.querySelector('.oprtn-disp');
 const resultDisplay = document.querySelector('.rslt-disp');
+const equalsBtn = document.querySelector('.equals');
 
 let firstOperand = '';
 let secondOperand = '';
@@ -49,6 +50,13 @@ allClearBtn.addEventListener('pointerdown', () => {
     resultDisplay.textContent = '';
 });
 
+// computes the values
+equalsBtn.addEventListener('pointerdown', () => {
+    operationDisplay.textContent = '';
+    resultDisplay.textContent = '';
+});
+
+
 
 
 // FUNCTIONS
@@ -70,127 +78,21 @@ function appendClickedBtnVal(button) {
 // appends the value of the clicked operator button to the operation display
 function appendOperator(button) {
     let btnValue = button.value;
-    if (operationDisplay.textContent.slice(-1) == btnValue) return;
+    if (operationDisplay.textContent.slice(-1) == btnValue ) return;
     operationDisplay.append(btnValue);
 };
 
 
 
+function computeValues(btn, first, second) {
+    switch(btn, first, second){
+        case 1:
+            if(btn.value === '+') return first + second;
+            break;
+
+    }
+};
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const operationDisplay = document.querySelector('.oprtn-disp');
-// const resultDisplay = document.querySelector('.rslt-disp');
-// const clearBtn = document.querySelector('.clrBtn')
-// const deleteBtn = document.querySelector('.backspace')
-// const addBtn = document.querySelector('.add');
-// const numsBtn = document.querySelectorAll('.numbr');
-// let values = [];
-
-
-// // 1. EVENT LISTENERS
-
-// clearBtn.addEventListener('pointerdown', () => clear());
-
-// deleteBtn.addEventListener('pointerdown', () => backspace());
-
-// addBtn.addEventListener('pointerdown', () => add());
-
-// numsBtn.forEach(btn => {
-//     btn.addEventListener('pointerdown', () => {
-//         dispNums(btn.value); 
-//         values.push(parseInt(operation.textContent, 10));
-//     });
-// });
-
-
-// // 2. FUNCTIONS
-
-// function add() {
-//     if (operation.textContent.slice(-1) == '+') return alert('+ is already present');
-//     if (operation.textContent == '') return alert('Input a number first!');
-//     dispNums(addBtn.value);
-//     let addition = values.reduce((acc, curr) => acc + curr);
-//     return results.textContent = addition;
-// };
-
-
-
-// function subtract(a, ...nums) {
-//     let subtraction = a;
-//     for (let num of nums){
-//         subtraction -= num;
-//     }
-//     return subtraction;
-// };
-
-
-
-// function multiply(...nums){
-//     let multiple = 1;
-//     for (let num of nums){
-//         multiple *= num;
-//     }
-//     return multiple;
-// };
-
-
-
-// function divide(a, ...nums){
-//     let dividend = a;
-//     for (let num of nums){
-//         dividend /= num
-//     }
-//     return dividend;
-// };
-
-
-
-
-
-// function clear(){
-//     operation.textContent = '';
-//     results.textContent = '';
-//     values = [];
-// };
-
-
-// function dispNums(val){
-//     operation.append(val);
-// };
-
-
-// function backspace(){
-//     results.textContent = '';
-//     let str = operation.textContent
-//      return operation.textContent = str.slice(0, str.length - 1);
-// };
