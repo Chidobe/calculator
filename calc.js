@@ -1,58 +1,77 @@
-// // CALCULATOR APP
-// Variables
+// THE CALCULATOR APP
+
+
+// VARIABLES
 const numberBtns = document.querySelectorAll('.numbr');
 const operatorBtns = document.querySelectorAll('.operator');
 const backspaceBtn = document.querySelector('.backspace');
 const allClearBtn = document.querySelector('.clear');
-const operation = document.querySelector('.oprtn-disp');
-const results = document.querySelector('.rslt-disp');
+const operationDisplay = document.querySelector('.oprtn-disp');
+const resultDisplay = document.querySelector('.rslt-disp');
 
-let firstNumberClicked = '';
-let secondNumberClicked = '';
+let firstOperand = '';
+let secondOperand = '';
 
 
 
-// Event listeners for buttons
+// EVENT LISTENERS
+
+//adds an event listener to all number buttons and executes some functions when the number is clicked
 numberBtns.forEach(btn => {
     btn.addEventListener('pointerdown', () => {
         getBtnValue(btn);
-        displayClickedBtn(btn);
+        appendClickedBtnVal(btn);
 
     });
 });
 
 
+//adds an event listener to all operator buttons and executes some functions when the operator is clicked
 operatorBtns.forEach(btn => {
     btn.addEventListener('pointerdown', () => {
         getBtnValue(btn);
-
+        appendOperator(btn); 
     });
 });
 
 
+// clears the last value added to the display
 backspaceBtn.addEventListener('pointerdown', () => {
-    results.textContent = '';
-    let str = operation.textContent
-    return operation.textContent = str.slice(0, str.length - 1);
+    resultDisplay.textContent = '';
+    let str = operationDisplay.textContent
+    return operationDisplay.textContent = str.slice(0, str.length - 1);
 });
 
 
+// clears all numbers or operators in the display
 allClearBtn.addEventListener('pointerdown', () => {
-    operation.textContent = '';
-    results.textContent = '';
+    operationDisplay.textContent = '';
+    resultDisplay.textContent = '';
 });
 
 
-// Functions
+
+// FUNCTIONS
+
+//gets the value of the button and stores it
 function getBtnValue(button) {
     return button.value;
 };
 
 
-function displayClickedBtn(button) {
+// appends the value of the clicked number button to the operation display
+function appendClickedBtnVal(button) {
     let btnValue = button.value;
-    //if (operation.textContent.length > 15) return;
-    operation.append(btnValue);
+    operationDisplay.append(btnValue);
+};
+
+
+
+// appends the value of the clicked operator button to the operation display
+function appendOperator(button) {
+    let btnValue = button.value;
+    if (operationDisplay.textContent.slice(-1) == btnValue) return;
+    operationDisplay.append(btnValue);
 };
 
 
@@ -89,10 +108,8 @@ function displayClickedBtn(button) {
 
 
 
-
-
-// const operation = document.querySelector('.oprtn-disp');
-// const results = document.querySelector('.rslt-disp');
+// const operationDisplay = document.querySelector('.oprtn-disp');
+// const resultDisplay = document.querySelector('.rslt-disp');
 // const clearBtn = document.querySelector('.clrBtn')
 // const deleteBtn = document.querySelector('.backspace')
 // const addBtn = document.querySelector('.add');
